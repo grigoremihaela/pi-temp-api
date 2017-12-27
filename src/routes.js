@@ -6,7 +6,6 @@ module.exports = (app) => {
     const service = new GetTempService();
     const temp = await service.get();
     
-    // respond back to request
     res.json([{
       success: true,
       temp: temp.temp
