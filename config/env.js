@@ -1,4 +1,4 @@
-const env = 'development'; // test, development, staging, production
+const env = 'production'; // test, development, staging, production
 
 const fs = require('fs');
 const dotenv = require('dotenv');
