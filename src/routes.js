@@ -8,7 +8,10 @@ module.exports = (app) => {
     
     res.json([{
       success: true,
-      temp: temp.temp
+      temp1: temp[0].temp,
+      sensorsUids1: temp[0].sensorsUids,
+      temp2: temp[1].temp,
+      sensorsUids2: temp[1].sensorsUids
     }]);
   });
 
