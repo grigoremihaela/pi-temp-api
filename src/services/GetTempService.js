@@ -5,10 +5,10 @@ class GetTempService {
   async get() {
     // returns all the ids of inserted rows
     const temps1 = await knex('temp').where({
-    	                   sensorsUids: '1'
+    	                   sensorsUids: '28-0316a1a16fff'
                          }).orderBy('created_at', 'desc');
     const temps2 = await knex('temp').where({
-    	                   sensorsUids: '2'
+    	                   sensorsUids: '28-03177067f9ff'
                          }).orderBy('created_at', 'desc');
 
     // we inserted just one so return first one
