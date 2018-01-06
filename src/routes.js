@@ -14,7 +14,7 @@ module.exports = (app) => {
 
   app.post('/temperature', async (req, res, next) => {    
     const tempData = req.body;
-    
+    console.log(tempData);
     const service = new TempService();
     const id = await service.add(tempData.temp, tempData.sensorsUids);
 
