@@ -16,13 +16,14 @@ module.exports = (app) => {
     const tempData = req.body;
     
     const service = new TempService();
-    const id = await service.add(tempData.temp);
+    const id = await service.add(tempData.temp, tempData.sensorsUids);
 
     // respond back to request
     res.json({
       id,
       success: true,
-      message: tempData.temp
+      message: tempData.temp,
+      sensorsUids: tempData.sensorsUids
     });
   })
 }
