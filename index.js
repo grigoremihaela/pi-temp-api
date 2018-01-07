@@ -24,7 +24,13 @@ const bodyParser = require('body-parser');
 const env = require('./config/env');
 require('express-async-errors');
 
-app.use(bodyParser.json());
+app.use(
+	bodyParser.json();
+	res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,contenttype'); // If needed
+  res.setHeader('Access-Control-Allow-Credentials', true); // If needed
+);
 
 require('./src/routes.js')(app);
 
