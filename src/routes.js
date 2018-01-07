@@ -4,7 +4,7 @@ const GetTempService = require('./services/GetTempService');
 module.exports = (app) => {
   app.get('/get/temperature', async (req, res, next) => {    
     const service = new GetTempService();
-    const temp = await service.get();
+    const temps = await service.get();
     
     res.json([{
       success: true,

@@ -5,7 +5,7 @@ class GetTempService {
   async get() {
     // returns all the ids of inserted rows
     const temps41 = await knex('temp').where({
-    	                   pin: 4,
+                         pin: 4,
                          numberSensor: 1
                          }).orderBy('created_at', 'desc');
     const temps42 = await knex('temp').where({
@@ -21,7 +21,7 @@ class GetTempService {
                          numberSensor: 4
                          }).orderBy('created_at', 'desc');
     const temps17 = await knex('temp').where({
-    	                   pin: 17
+                         pin: 17
                          }).orderBy('created_at', 'desc');
     const temps22 = await knex('temp').where({
                          pin: 22
