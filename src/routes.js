@@ -6,7 +6,7 @@ module.exports = (app) => {
     const service = new GetTempService();
     const temps = await service.get();
     
-    res.json([{
+    res.json({
       success: true,
       temp41: temps.temps41.temp,
       temp42: temps.temps42.temp,
@@ -14,7 +14,7 @@ module.exports = (app) => {
       temp44: temps.temps44.temp,
       temp17: temps.temps17.temp,
       temp22: temps.temps22.temp
-    }]);
+    });
   });
 
   app.post('/temperature', async (req, res, next) => {    
