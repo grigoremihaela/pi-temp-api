@@ -26,7 +26,9 @@ module.exports = (app) => {
       id,
       success: true,
       message: tempData.temp,
-      sensorsUids: tempData.sensorsUids
+      sensorsUids: tempData.sensorsUids,
+      pin: tempData.pin,
+      numberSensor: tempData.numberSensor
     });
   })
 }
