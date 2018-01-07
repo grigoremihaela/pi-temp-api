@@ -5,6 +5,7 @@ module.exports = (app) => {
   app.get('/get/temperature', async (req, res, next) => {    
     const service = new GetTempService();
     const temps = await service.get();
+    res.setHeader('Access-Control-Allow-Origin', '*');
     
     res.json({
       success: true,
