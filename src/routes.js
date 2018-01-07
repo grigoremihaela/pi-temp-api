@@ -8,12 +8,12 @@ module.exports = (app) => {
     
     res.json([{
       success: true,
-      temp41: temps[0].temp,
-      temp42: temps[1].temp,
-      temp43: temps[2].temp,
-      temp44: temps[3].temp,
-      temp17: temps[4].temp,
-      temp22: temps[5].temp
+      temp41: temps.temps41.temp,
+      temp42: temps.temps42.temp,
+      temp43: temps.temps43.temp,
+      temp44: temps.temps44.temp,
+      temp17: temps.temps17.temp,
+      temp22: temps.temps22.temp
     }]);
   });
 

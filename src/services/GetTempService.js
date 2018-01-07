@@ -26,7 +26,8 @@ class GetTempService {
     const temps22 = await knex('temp').where({
                          pin: 22
                          }).orderBy('created_at', 'desc');
-    const temps = [temps41[0], temps42[0], temps43[0], temps44[0], temps17[0], temps22[0]];
+    const temps = {temps41: temps41[0], temps42: temps42[0], temps43: temps43[0], temps44: temps44[0], temps17: temps17[0], 
+                   temps22: temps22[0]};
 
     // we inserted just one so return first one
     return temps;
