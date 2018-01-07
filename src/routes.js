@@ -19,7 +19,7 @@ module.exports = (app) => {
     const tempData = req.body;
   
     const service = new TempService();
-    const id = await service.add(tempData.temp, tempData.sensorsUids);
+    const id = await service.add(tempData.temp, tempData.sensorsUids, tempData.pin, tempData.numberSensor);
 
     // respond back to request
     res.json({
