@@ -7,12 +7,13 @@ module.exports = (app) => {
     const temps = await service.get();
     
     res.json({
-      temp41: temps.temps41,
-      temp42: temps.temps42,
-      temp43: temps.temps43,
-      temp44: temps.temps44,
-      temp17: temps.temps17,
-      temp22: temps.temps22
+      success: true,
+      temp41: temps.temps41.temp,
+      temp42: temps.temps42.temp,
+      temp43: temps.temps43.temp,
+      temp44: temps.temps44.temp,
+      temp17: temps.temps17.temp,
+      temp22: temps.temps22.temp
     });
   });
 
