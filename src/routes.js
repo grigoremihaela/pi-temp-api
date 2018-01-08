@@ -7,7 +7,6 @@ module.exports = (app) => {
     const temps = await service.get();
     
     res.json({
-      success: true,
       temp41: temps.temps41,
       temp42: temps.temps42,
       temp43: temps.temps43,
