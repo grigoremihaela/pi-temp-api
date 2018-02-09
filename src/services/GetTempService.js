@@ -1,5 +1,6 @@
 const knexfile = require('./../../knexfile.js');
 const knex = require('knex')(knexfile.production);
+//const knex = require('knex')(knexfile.development);
 
 class GetTempService {
   async get() {

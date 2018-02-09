@@ -1,4 +1,5 @@
 const env = 'production'; // test, development, staging, production
+// const env = 'development';
 
 const fs = require('fs');
 const dotenv = require('dotenv');
