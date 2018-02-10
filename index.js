@@ -47,7 +47,15 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
-
+/*
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Cache-Control, Pragma,  Authorization");
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
+*/
 require('./src/routes.js')(app);
 
 app.listen(process.env.PORT, '0.0.0.0', () => {
